@@ -1,0 +1,61 @@
+debug: false
+server:
+  port: 8001
+  error:
+    path: /error
+spring:
+#  profiles:
+#    active: dev
+#  datasource:
+#    username: root
+#    password: zxc123456
+#    url: jdbc:mysql://127.0.0.1:3306/cluster?serverTimezone=GMT%2B8
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+  #  redis:
+  #      host: 127.0.0.1
+  #      port: 6379
+#  jpa:
+    # 控制台显示SQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+    # 会根据就映射实体类自动创建或更新数据表
+    # 默认创建表类型是MyISAM，是非事务安全的，所以无法实现事物回滚
+    # 指定如下方言: 创建的表类型是Innodb，才可以进行对事物的回滚。
+#    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  #开发环境下关闭thymeleaf模板缓存，thymeleaf默认是开启状态
+#  thymeleaf:
+#    cache: false
+  messages:
+    basename: i18n.msg
+    encoding: utf-8
+# 调整日志级别: trace < debug < info < warn < error
+#logging:
+#  level:
+#    root: info
+#    com:
+#      zdl:
+#        incubator:
+#          controller: debug
+#          mapper: debug
+  file:
+    # spring.log 输出路径
+    path: log/
+  # 日志输出格式说明:
+  # %d 输出日期时间，
+  # %thread 输出当前线程名，
+  # %-5level 输出日志级别，左对齐5个字符宽度
+  # %logger{50} 输出全类名最长50个字符，超过按照句点分割
+  # %msg 日志信息
+  # %n 换行符
+  pattern:
+    # 修改控制台输出的日志格式
+    console: '%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n'
+    # 修改文件中输出的日志格式
+    file: '%d{yyyy-MM-dd HH:mm:ss.SSS} >>> [%thread] >>> %-5level >>> %logger{50} >>> %msg%n'
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
