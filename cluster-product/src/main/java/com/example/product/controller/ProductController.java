@@ -14,7 +14,7 @@ public class ProductController {
     
     @PostMapping
     public String add(Provider provider){
-        providerMapper.add(provider);
+        providerMapper.insert(provider);
         return "添加成功" + provider.getId();
     }
 
@@ -32,6 +32,6 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public Provider get(@PathVariable("id") Integer id) {
-        return providerMapper.get(id);
+        return providerMapper.selectOne(id);
     }
 }

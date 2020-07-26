@@ -53,8 +53,8 @@ logging:
     console: '%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n'
     # 修改文件中输出的日志格式
     file: '%d{yyyy-MM-dd HH:mm:ss.SSS} >>> [%thread] >>> %-5level >>> %logger{50} >>> %msg%n'
-#mybatis:
-#  config-location: classpath:mybatis/mybatis-config.xml
-#  mapper-locations: classpath:mybatis/mapper/*.xml
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
 
 
